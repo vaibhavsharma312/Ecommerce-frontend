@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Glowing</title>
+  <meta name="description" content="Your Glowing shopping cart">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="top" class="inner-page">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <div class="alert">
+      <div class="container">
+        <p class="alert-text">Free Shipping On All Orders Above ₹499 | Pan-India Delivery</p>
+      </div>
+    </div>
+
+    <div class="header-top" data-header>
+      <div class="container">
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="input-wrapper">
+          <input type="search" name="search" placeholder="Search product" class="search-field">
+
+          <button class="search-submit" aria-label="search">
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <a href="./index.html" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+        </a>
+
+        <div class="header-actions">
+
+          <a href="./profile.html" class="header-action-btn" aria-label="my account">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+          <a href="./wishlist.html" class="header-action-btn" aria-label="wishlist">
+            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge" data-wishlist-count>4</span>
+          </a>
+
+          <a href="./cart.html" class="header-action-btn active" aria-label="cart" aria-current="page">
+            <data class="btn-text" value="2797" data-cart-total>₹2,797.00</data>
+
+            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge" data-cart-count>3</span>
+          </a>
+
+        </div>
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+
+            <li>
+              <a href="./index.html#home" class="navbar-link has-after">Home</a>
+            </li>
+
+            <li>
+              <a href="./index.html#collection" class="navbar-link has-after">Collection</a>
+            </li>
+
+            <li>
+              <a href="./index.html#shop" class="navbar-link has-after">Shop</a>
+            </li>
+
+            <li>
+              <a href="./index.html#offer" class="navbar-link has-after">Offer</a>
+            </li>
+
+            <li>
+              <a href="./index.html#blog" class="navbar-link has-after">Blog</a>
+            </li>
+
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+  <!--
+    - #MOBILE NAVBAR
+  -->
+
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
+
+      <div class="wrapper">
+        <a href="./index.html" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a href="./index.html#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="./index.html#collection" class="navbar-link" data-nav-link>Collection</a>
+        </li>
+
+        <li>
+          <a href="./index.html#shop" class="navbar-link" data-nav-link>Shop</a>
+        </li>
+
+        <li>
+          <a href="./index.html#offer" class="navbar-link" data-nav-link>Offer</a>
+        </li>
+
+        <li>
+          <a href="./index.html#blog" class="navbar-link" data-nav-link>Blog</a>
+        </li>
+
+        <li><hr></li>
+
+        <li>
+          <a href="./profile.html" class="navbar-link" data-nav-link>My Account</a>
+        </li>
+
+        <li>
+          <a href="./orders.html" class="navbar-link" data-nav-link>My Orders</a>
+        </li>
+
+        <li>
+          <a href="./wishlist.html" class="navbar-link" data-nav-link>Wishlist</a>
+        </li>
+
+        <li>
+          <a href="./cart.html" class="navbar-link" data-nav-link>Cart</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <section class="page-title" aria-label="page title">
+        <div class="container">
+          <h1 class="h2">Shopping Cart</h1>
+
+          <ul class="breadcrumb">
+            <li><a href="./index.html">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page">Cart</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-label="shopping cart">
+        <div class="container">
+
+          <div class="steps" aria-label="checkout progress">
+            <div class="step current"><span class="step-num">1</span> Cart</div>
+            <span class="step-line"></span>
+            <div class="step"><span class="step-num">2</span> Checkout</div>
+            <span class="step-line"></span>
+            <div class="step"><span class="step-num">3</span> Confirmation</div>
+          </div>
+
+          <div class="cart-layout">
+
+            <div>
+              <p class="free-ship" data-free-ship>
+                <ion-icon name="car-outline" aria-hidden="true"></ion-icon>
+                <span>Yay! Your order qualifies for <strong>FREE delivery</strong>.</span>
+              </p>
+
+              <ul data-cart-list>
+
+              <li class="cart-item" data-cart-item data-unit="1299">
+                <img src="./assets/images/product-02.jpg" width="100" height="133" loading="lazy" alt="Bio-shroom Rejuvenating Serum" class="cart-item-img">
+
+                <div>
+                  <a href="./product.html" class="title">Bio-shroom Rejuvenating Serum</a>
+                  <p class="variant">Size: 30 ml</p>
+                  <p class="unit-price">₹1,299.00 </p>
+                </div>
+
+                <div class="cart-item-controls">
+                  <div class="qty">
+                    <button type="button" aria-label="decrease quantity" data-qty-minus>
+                      <ion-icon name="remove-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                    <input type="number" value="1" min="1" max="10" aria-label="quantity" data-qty-input>
+                    <button type="button" aria-label="increase quantity" data-qty-plus>
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                  <p class="line-total" data-line-total>₹1,299.00</p>
+
+                  <button type="button" class="remove-btn" data-remove-item>
+                    <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </li>
+
+              <li class="cart-item" data-cart-item data-unit="599">
+                <img src="./assets/images/product-01.jpg" width="100" height="133" loading="lazy" alt="Gentle Facial Cleanser" class="cart-item-img">
+
+                <div>
+                  <a href="./product.html" class="title">Gentle Facial Cleanser</a>
+                  <p class="variant">Size: 150 ml</p>
+                  <p class="unit-price">₹599.00 <del>₹749.00</del></p>
+                </div>
+
+                <div class="cart-item-controls">
+                  <div class="qty">
+                    <button type="button" aria-label="decrease quantity" data-qty-minus>
+                      <ion-icon name="remove-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                    <input type="number" value="1" min="1" max="10" aria-label="quantity" data-qty-input>
+                    <button type="button" aria-label="increase quantity" data-qty-plus>
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                  <p class="line-total" data-line-total>₹599.00</p>
+
+                  <button type="button" class="remove-btn" data-remove-item>
+                    <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </li>
+
+              <li class="cart-item" data-cart-item data-unit="899">
+                <img src="./assets/images/product-03.jpg" width="100" height="133" loading="lazy" alt="Foaming Face Wash" class="cart-item-img">
+
+                <div>
+                  <a href="./product.html" class="title">Foaming Face Wash</a>
+                  <p class="variant">Size: 100 ml</p>
+                  <p class="unit-price">₹899.00 </p>
+                </div>
+
+                <div class="cart-item-controls">
+                  <div class="qty">
+                    <button type="button" aria-label="decrease quantity" data-qty-minus>
+                      <ion-icon name="remove-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                    <input type="number" value="1" min="1" max="10" aria-label="quantity" data-qty-input>
+                    <button type="button" aria-label="increase quantity" data-qty-plus>
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                  <p class="line-total" data-line-total>₹899.00</p>
+
+                  <button type="button" class="remove-btn" data-remove-item>
+                    <ion-icon name="trash-outline" aria-hidden="true"></ion-icon>
+                    Remove
+                  </button>
+                </div>
+              </li>
+              </ul>
+
+              <div class="empty-state" data-cart-empty hidden>
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                <h2 class="h3">Your cart is empty</h2>
+                <p>Looks like you haven't added anything yet.</p>
+                <a href="./index.html#shop" class="btn btn-primary">Start Shopping</a>
+              </div>
+
+              <div class="cart-footer">
+                <a href="./index.html#shop" class="btn-link">
+                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                  <span class="span">Continue Shopping</span>
+                </a>
+                <a href="./wishlist.html" class="link-underline">View wishlist (4)</a>
+              </div>
+            </div>
+
+            <aside class="summary" aria-label="order summary">
+              <h2 class="summary-title">Order Summary</h2>
+
+              <div class="summary-row"><span>Price (<span data-sum-count>3</span> items)</span><span class="val" data-sum-mrp>₹2,947.00</span></div>
+              <div class="summary-row"><span>Discount</span><span class="val green" data-sum-discount>− ₹150.00</span></div>
+              <div class="summary-row"><span>Delivery</span><span class="val green" data-sum-ship>FREE</span></div>
+              <div class="summary-row total"><span>Total</span><span class="val" data-sum-total>₹2,797.00</span></div>
+              <p class="tax-note">Inclusive of all taxes (GST)</p>
+
+              <div class="coupon">
+                <label for="coupon" class="form-label">Have a coupon?</label>
+                <div class="input-group">
+                  <input type="text" id="coupon" class="input-field" placeholder="Enter code">
+                  <button type="button" class="btn btn-outline">Apply</button>
+                </div>
+                <p class="coupon-hint">Try <strong class="text-black">GLOW10</strong> for 10% off on orders above ₹1,999</p>
+              </div>
+
+              <a href="./checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+
+              <ul class="trust-list">
+                <li><ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon> 100% secure payments – UPI, cards &amp; COD</li>
+                <li><ion-icon name="refresh-outline" aria-hidden="true"></ion-icon> Easy 7-day returns</li>
+                <li><ion-icon name="leaf-outline" aria-hidden="true"></ion-icon> Clean, cruelty-free formulas</li>
+              </ul>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" data-section>
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <p class="footer-list-text">
+              Find a location nearest you. See <a href="#" class="link">Our Stores</a>
+            </p>
+          </li>
+
+          <li>
+            <p class="footer-list-text bold">+91 98765 43210</p>
+          </li>
+
+          <li>
+            <p class="footer-list-text">hello@glowing.in</p>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Useful links</p>
+          </li>
+
+          <li>
+            <a href="./product.html" class="footer-link">New Products</a>
+          </li>
+
+          <li>
+            <a href="./index.html#shop" class="footer-link">Best Sellers</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Bundle & Save</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Online Gift Card</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Infomation</p>
+          </li>
+
+          <li>
+            <a href="./orders.html" class="footer-link">Track / Return an Order</a>
+          </li>
+
+          <li>
+            <a href="./profile.html" class="footer-link">My Account</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Shipping FAQ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="newsletter-title">Good emails.</p>
+
+          <p class="newsletter-text">
+            Enter your email below to be the first to know about new collections and product launches.
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Enter your email address" required
+              class="email-field">
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div class="wrapper">
+          <p class="copyright">
+            &copy; 2022 codewithsadee
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <a href="./index.html" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" loading="lazy" alt="Glowing">
+        </a>
+
+        <img src="./assets/images/pay.png" width="313" height="28" alt="available all payment method" class="w-100">
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/pages.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+</body>
+
+</html>
